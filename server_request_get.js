@@ -17,7 +17,14 @@ var server = http.createServer(function (req, res) {
   console.log("--- log end ---");
 
   res.writeHead(200, { "Content-Type": "text/html" });
-  res.end("var1의 값은 " + parseQuery.var1);
+  res.end(
+    "var1의값=" +
+      parseQuery.var1 +
+      ", var2의값=" +
+      parseQuery.var2 +
+      ", var3의값=" +
+      parseQuery.var3
+  );
 });
 
 server.listen(8080, function () {
